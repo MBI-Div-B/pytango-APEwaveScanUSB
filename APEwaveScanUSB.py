@@ -39,7 +39,7 @@ class APEwaveScanUSB(Device):
     )
     gain = attribute(
         label = 'Set Detector Gain ',
-        dtype = int,
+        dtype = gainEnum,
         access = AttrWriteType.READ_WRITE
     )
     maxHold = attribute(
