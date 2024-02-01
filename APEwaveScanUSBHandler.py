@@ -88,6 +88,7 @@ class APEwaveScanUSBHandler(object):
         self.dev.send(':measurement:fourier_limit:enabled='+str(int(num)))
     
     def get_gain(self):
+        print(self.dev.query(":MEASUREMENT:GAIN?"))
         return {'1':0,'2':1,'5':2,'10':3}[self.dev.query(":MEASUREMENT:GAIN?")]
     def set_gain(self,num):
         self.dev.send(":MEASUREMENT:GAIN "+{'0':"1",'1':"2",'2':"5",'3':"10"}[str(num)])
