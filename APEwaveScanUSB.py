@@ -202,23 +202,23 @@ class APEwaveScanUSB(Device):
         return self.wav.get_peakMax()
 
     def read_peak1(self):
-        return self.wav.get_peak()
+        return self.wav.get_peak(win=1)
         
     def read_FWHM1(self):
-        return self.wav.get_FWHM()
+        return self.wav.get_FWHM(win=1)
 
     def read_center1(self):
-        return self.wav.get_center()
+        return self.wav.get_center(win=1)
 
     def read_peak2(self):
-        return self.wav.get_peak()
+        return self.wav.get_peak(win=2)
         
     def read_FWHM2(self):
-        return self.wav.get_FWHM()
+        return self.wav.get_FWHM(win=2)
 
     def read_center2(self):
 
-        return self.wav.get_center()
+        return self.wav.get_center(win=2)
 
     def read_maxWave(self):
         return self.wav.get_maxWave()
