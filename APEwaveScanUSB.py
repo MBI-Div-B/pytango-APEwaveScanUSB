@@ -31,6 +31,11 @@ class APEwaveScanUSB(Device):
         dtype= "DevBoolean",
         access= AttrWriteType.READ
     )
+    gain = attribute(
+        label = 'Set Detector Gain ',
+        dtype = int,
+        access = AttrWriteType.READ_WRITE
+    )
     maxHold = attribute(
         label= 'Maxhold function status',
         dtype= "DevBoolean",
@@ -165,6 +170,7 @@ class APEwaveScanUSB(Device):
         access = AttrWriteType.READ_WRITE
     )
     
+    
 
     def init_device(self):
         Device.init_device(self)
@@ -264,6 +270,10 @@ class APEwaveScanUSB(Device):
         return self.wav.get_Data()
     def read_fitData(self):
         return self.wav.get_fitData()
+    def read_Gain(self):
+        return self.wav.get_gain()
+    def write_gain(self,num):
+        self.wav.set_gain(num)
 
 
     
