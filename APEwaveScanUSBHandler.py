@@ -55,7 +55,7 @@ class APEwaveScanUSBHandler(object):
             self.dev.send(":measurement:wlrange:max "+str(num))
         self.dev.send(":measurement:peak"+str(win)+":max? " + str(num))
     def get_Ewidth(self):
-        return float(self.dev.send(":measurement:peak1:ewidth?"))
+        return float(self.dev.query(":measurement:peak1:ewidth?"))
     def set_Ewidth(self,num):
         self.dev.send(":measurement:peak1:ewidth "+str(num))
 
