@@ -232,22 +232,22 @@ class APEwaveScanUSB(Device):
         self.wav.set_minBoardWave(num)
     def read_minBoardWave(self):
         return self.wav.get_minBoardWave()
-    def write_maxBoardWave1(self,num,win=1):
-        self.wav.set_maxBoardWave(num)
-    def read_maxBoardWave1(self,win=1):
-        return self.wav.get_maxBoardWave()
+    def write_maxBoardWave1(self,num):
+        self.wav.set_maxBoardWave(num,win=1)
+    def read_maxBoardWave1(self):
+        return self.wav.get_maxBoardWave(win=1)
     def write_minBoardWave1(self,num,win=1):
         self.wav.set_minBoardWave(num)
-    def read_minBoardWave1(self,win=1):
-        return self.wav.get_minBoardWave()
-    def write_maxBoardWave2(self,num,win=2):
-        self.wav.set_maxBoardWave(num)
-    def read_maxBoardWave2(self,win=2):
-        return self.wav.get_maxBoardWave()
-    def write_minBoardWave2(self,num,win=2):
-        self.wav.set_minBoardWave(num)
-    def read_minBoardWave2(self,win=2):
-        return self.wav.get_minBoardWave()
+    def read_minBoardWave1(self):
+        return self.wav.get_minBoardWave(win=1)
+    def write_maxBoardWave2(self,num):
+        self.wav.set_maxBoardWave(num,win=2)
+    def read_maxBoardWave2(self):
+        return self.wav.get_maxBoardWave(win=2)
+    def write_minBoardWave2(self,num):
+        self.wav.set_minBoardWave(num,win=1)
+    def read_minBoardWave2(self):
+        return self.wav.get_minBoardWave(win=2)
     def read_Ewidth1(self):
         return self.wav.get_Ewidth()
     def write_Ewidth1(self,num):
