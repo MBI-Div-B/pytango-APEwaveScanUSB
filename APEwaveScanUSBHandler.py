@@ -6,8 +6,6 @@ class APEwaveScanUSBHandler(object):
         self.dev = ape_device.ape_device(host, port, name)
     def get_run(self):
         test = self.dev.query(":status:run?")
-        print("here")
-        print(test)
         return bool(int(test))
     def set_run(self,num):
         self.dev.send(":STATUS:RUN="+str(int(num)))
@@ -83,6 +81,7 @@ class APEwaveScanUSBHandler(object):
         return acf.T
     
     def get_fourLim(self):
+        print(self.dev.query(':measurement:fourier_limit:enabled?')
         return bool(int(self.dev.query(':measurement:fourier_limit:enabled?')))
     
     def set_fourLim(self,num):
