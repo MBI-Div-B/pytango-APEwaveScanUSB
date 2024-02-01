@@ -187,7 +187,7 @@ class APEwaveScanUSB(Device):
         return self.wav.get_maxHold()
 
     def read_avg(self):
-        return self.wav.avg()
+        return self.wav.get_avg()
     
     def read_peak(self):
         return self.wav.get_peak()
