@@ -6,6 +6,7 @@ class APEwaveScanUSBHandler(object):
         self.dev = ape_device.ape_device(host, port, name)
     def get_run(self):
         test = self.dev.query(":status:run?")
+        print("here")
         print(test)
         return bool(int(test))
     def set_run(self,num):
