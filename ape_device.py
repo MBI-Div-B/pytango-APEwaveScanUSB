@@ -67,6 +67,7 @@ class ape_device:
             self.dev.close()
 
     def send(self, command):
+        print(command)
         if not self.connected:
             raise Exception('[Send] Error. Not connected')
         else:
@@ -126,7 +127,7 @@ class ape_device:
             return answer
 
     def query(self, command, block=False):
-
+        print(command)
         answer = bytearray([])
         self.send(command)
         if block == False:
