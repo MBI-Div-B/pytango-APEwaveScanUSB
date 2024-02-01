@@ -123,7 +123,7 @@ class APEwaveScanUSB(Device):
         access = AttrWriteType.READ_WRITE
     )
     Ewidth1 = attribute(
-        lable = 'Set expected spectral width for peak window 1 measurements',
+        label = 'Set expected spectral width for peak window 1 measurements',
         dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
