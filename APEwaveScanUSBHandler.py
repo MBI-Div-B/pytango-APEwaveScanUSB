@@ -17,9 +17,9 @@ class APEwaveScanUSBHandler(object):
         return int(self.dev.query(":STATUS:AVG?"))
     def get_peak(self, win=0):
         if win == 0:
-            return float(self.dev.query(":SPECTRUM:PEAK"))
+            return float(self.dev.query(":SPECTRUM:PEAK?"))
         else:
-            return float(self.dev.query(":SPECTRUM:"+str(win)+"PEAK"))
+            return float(self.dev.query(":SPECTRUM:"+str(win)+"PEAK?"))
     def get_FWHM(self, win=0):
         if win == 0:
             return float(self.dev.query(":SPECTRUM:FWHM"))
