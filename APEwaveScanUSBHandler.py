@@ -8,7 +8,7 @@ class APEwaveScanUSBHandler(object):
         test = self.dev.query(":status:run?")
         return int(test)
     def set_run(self,num):
-        self.dev.send(":STATUS:RUN "+str(int(num)))
+        self.dev.send(":STATUS:RUN="+str(int(num)))
     def get_smooth(self):
         return int(self.dev.query(":STATUS:SMOOTH?"))
     def get_maxHold(self):
