@@ -64,7 +64,7 @@ class APEwaveScanUSB(Device):
     )
     peak1 = attribute(
         label= 'peak wavelength for window 1',
-        dtype= "DevDouble   ",
+        dtype= "DevDouble",
         access= AttrWriteType.READ
     )
     FWHM1 = attribute(
@@ -79,7 +79,7 @@ class APEwaveScanUSB(Device):
     )
     peak2 = attribute(
         label= 'peak wavelength for window 2',
-        dtype= "DevDouble   ",
+        dtype= "DevDouble",
         access= AttrWriteType.READ
     )
     FWHM2 = attribute(
