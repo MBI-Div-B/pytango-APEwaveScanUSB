@@ -7,8 +7,8 @@ import numpy as np
 class fitEnum(IntEnum):
     OFF = 0
     GAUSSIAN = 1
-    SECH2 = 2
-    LORENTZ = 3
+    LORENTZ = 2
+    SECH2 = 3
 
 
 
