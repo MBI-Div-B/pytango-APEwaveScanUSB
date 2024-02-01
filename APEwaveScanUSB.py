@@ -99,27 +99,27 @@ class APEwaveScanUSB(Device):
     )
     minWave = attribute(
         label = 'minimum wavelength measureable',
-        dtype = 'DevDouble,
+        dtype = 'DevDouble',
         access = AttrWriteType.READ
     )
     maxBoardWave = attribute(
         label = 'set upper wavelength boarder of measurement window',
-        dtype = 'DevDouble,
+        dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
     minBoardWave = attribute(
         label = 'set upper wavelength boarder of measurement window',
-        dtype = 'DevDouble,
+        dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
     maxBoardWave1 = attribute(
         label = 'set upper wavelength boarder of peak window 1',
-        dtype = 'DevDouble,
+        dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
     minBoardWave1 = attribute(
         label = 'set upper wavelength boarder of peak window 1',
-        dtype = 'DevDouble,
+        dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
     Ewidth1 = attribute(
@@ -129,12 +129,12 @@ class APEwaveScanUSB(Device):
     )
     maxBoardWave2 = attribute(
         label = 'set upper wavelength boarder of peak window 2',
-        dtype = 'DevDouble,
+        dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
     minBoardWave2 = attribute(
         label = 'set upper wavelength boarder of peak window 2',
-        dtype = 'DevDouble,
+        dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
     fit = attribute(
