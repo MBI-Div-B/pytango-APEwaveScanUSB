@@ -90,4 +90,4 @@ class APEwaveScanUSBHandler(object):
     def get_gain(self):
         return int(self.dev.query(":MEASUREMENT:GAIN?"))
     def set_gain(self,num):
-        self.dev.send(":MEASUREMENT:GAIN "+str(num)))
+        self.dev.send(":MEASUREMENT:GAIN "+str(num))
