@@ -7,7 +7,7 @@ class APEwaveScanUSBHandler(object):
     def get_run(self):
         test = self.dev.query(":status:run?")
         return int(test)
-    def set_run(self):
+    def set_run(self,num):
         self.dev.send(":STATUS:RUN "+str(int(num)))
     def get_smooth(self):
         return int(self.dev.query(":STATUS:SMOOTH?"))
