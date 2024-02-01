@@ -61,7 +61,7 @@ class APEwaveScanUSBHandler(object):
 
     def get_fit(self):
         if bool(int(self.dev.query(':measurement:fit:enabled?'))):
-            return {"GAUSS":1, "LORENTZ":2, "SECH2":3}[self.dev.query(':measurement:fit:type?')]
+            return int(self.dev.query(':measurement:fit:type?'))+1
         return 0
     def set_fit(self,num):
         if num == 0:
