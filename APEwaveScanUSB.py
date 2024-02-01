@@ -34,7 +34,7 @@ class APEwaveScanUSB(Device):
     maxHold = attribute(
         label= 'Maxhold function status',
         dtype= "DevBoolean",
-        access= AttrWriteType.READ_WRITE
+        access= AttrWriteType.READ
     )
     avg = attribute(
         label= 'Number of Measurements used for averaging',
