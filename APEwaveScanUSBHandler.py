@@ -22,14 +22,14 @@ class APEwaveScanUSBHandler(object):
             return float(self.dev.query(":SPECTRUM:"+str(win)+"PEAK?"))
     def get_FWHM(self, win=0):
         if win == 0:
-            return float(self.dev.query(":SPECTRUM:FWHM"))
+            return float(self.dev.query(":SPECTRUM:FWHM?"))
         else:
-            return float(self.dev.query(":SPECTRUM:"+str(win)+"FWHM"))
+            return float(self.dev.query(":SPECTRUM:"+str(win)+"FWHM?"))
     def get_center(self, win=0):
         if win == 0:
-            return float(self.dev.query(":SPECTRUM:CENTER"))
+            return float(self.dev.query(":SPECTRUM:CENTER?"))
         else:
-            return float(self.dev.query(":SPECTRUM:"+str(win)+"CENTER"))
+            return float(self.dev.query(":SPECTRUM:"+str(win)+"CENTER?"))
     def get_peakMax(self):
         return float(self.dev.query(":SPECTRUM:PEAK_MAX?"))
     def get_minWave(self):
