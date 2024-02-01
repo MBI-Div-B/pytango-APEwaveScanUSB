@@ -94,7 +94,7 @@ class APEwaveScanUSB(Device):
     )
     maxWave = attribute(
         label = 'maximum wavelength measureable',
-        dtype = 'DevDouble,
+        dtype = 'DevDouble',
         access = AttrWriteType.READ
     )
     minWave = attribute(
