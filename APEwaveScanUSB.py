@@ -10,6 +10,12 @@ class fitEnum(IntEnum):
     LORENTZ = 2
     SECH2 = 3
 
+class gainEnum(IntEnum):
+    _1 = 0
+    _2 = 1
+    _5 = 2
+    _10 = 3
+
 
 
 class APEwaveScanUSB(Device):
@@ -33,7 +39,7 @@ class APEwaveScanUSB(Device):
     )
     gain = attribute(
         label = 'Set Detector Gain ',
-        dtype = int,
+        dtype = gainEnum,
         access = AttrWriteType.READ_WRITE
     )
     maxHold = attribute(

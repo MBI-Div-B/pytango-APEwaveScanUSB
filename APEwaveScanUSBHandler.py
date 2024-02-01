@@ -59,7 +59,7 @@ class APEwaveScanUSBHandler(object):
 
     def get_fit(self):
         if bool(int(self.dev.query(':measurement:fit:enabled?'))):
-            return {"GAUSS":1, "LORENTZ":2, "SECH2y":3}[self.dev.query(':measurement:fit:type?')]
+            return {"GAUSS":1, "LORENTZ":2, "SECH2":3}[self.dev.query(':measurement:fit:type?')]
         return 0
     def set_fit(self,num):
         if num == 0:
@@ -88,6 +88,8 @@ class APEwaveScanUSBHandler(object):
         self.dev.send(':measurement:fourier_limit:enabled='+str(int(num)))
     
     def get_gain(self):
-        return int(self.dev.query(":MEASUREMENT:GAIN?"))
+        print(self.dev.query(":MEASUREMENT:GAIN?"))
+        return {'1':0,'2':1,'5':2,'10':3}[self.dev.query(":MEASUREMENT:GAIN?")]
+
     def set_gain(self,num):
-        self.dev.send(":MEASUREMENT:GAIN "+str(num))
+        self.dev.send(":MEASUREMENT:GAIN "+{'0':"1",'1':"2",'2':"5",'3':"10"}[str(num)])
