@@ -81,7 +81,7 @@ class APEwaveScanUSBHandler(object):
         return acf.T
     
     def get_fourLim(self):
-        print(self.dev.query(':measurement:fourier_limit:enabled?')
+        print(self.dev.query(':measurement:fourier_limit:enabled?'))
         return bool(int(self.dev.query(':measurement:fourier_limit:enabled?')))
     
     def set_fourLim(self,num):
