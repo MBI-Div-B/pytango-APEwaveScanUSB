@@ -240,13 +240,13 @@ class APEwaveScanUSB(Device):
         self.wav.set_minBoardWave(num)
     def read_minBoardWave1(self,win=1):
         return self.wav.get_minBoardWave()
-    def write_maxBoardWave1(self,num,win=2):
+    def write_maxBoardWave2(self,num,win=2):
         self.wav.set_maxBoardWave(num)
-    def read_maxBoardWave1(self,win=2):
+    def read_maxBoardWave2(self,win=2):
         return self.wav.get_maxBoardWave()
-    def write_minBoardWave1(self,num,win=2):
+    def write_minBoardWave2(self,num,win=2):
         self.wav.set_minBoardWave(num)
-    def read_minBoardWave1(self,win=2):
+    def read_minBoardWave2(self,win=2):
         return self.wav.get_minBoardWave()
     def read_Ewidth1(self):
         return self.wav.get_Ewidth()
