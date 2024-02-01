@@ -119,7 +119,7 @@ class APEwaveScanUSB(Device):
         access = AttrWriteType.READ_WRITE
     )
     minBoardWave = attribute(
-        label = 'set upper wavelength boarder of measurement window',
+        label = 'set lower wavelength boarder of measurement window',
         dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
@@ -129,7 +129,7 @@ class APEwaveScanUSB(Device):
         access = AttrWriteType.READ_WRITE
     )
     minBoardWave1 = attribute(
-        label = 'set upper wavelength boarder of peak window 1',
+        label = 'set lower wavelength boarder of peak window 1',
         dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
@@ -144,7 +144,7 @@ class APEwaveScanUSB(Device):
         access = AttrWriteType.READ_WRITE
     )
     minBoardWave2 = attribute(
-        label = 'set upper wavelength boarder of peak window 2',
+        label = 'set lower wavelength boarder of peak window 2',
         dtype = 'DevDouble',
         access = AttrWriteType.READ_WRITE
     )
