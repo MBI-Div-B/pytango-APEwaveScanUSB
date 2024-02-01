@@ -270,7 +270,7 @@ class APEwaveScanUSB(Device):
         return self.wav.get_Data()
     def read_fitData(self):
         return self.wav.get_fitData()
-    def read_Gain(self):
+    def read_gain(self):
         return self.wav.get_gain()
     def write_gain(self,num):
         self.wav.set_gain(num)
